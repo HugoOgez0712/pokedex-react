@@ -8,12 +8,17 @@
 }
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, 200px);
+  width: 100%;
+  max-width: 1200px;
+
+  justify-content: center;
   gap: 2rem;
 }
 .pokemon-card {
   padding: 1rem;
   border-radius: 10px;
+  width: 200px;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
@@ -45,6 +50,13 @@
 }
 
 /* Custom type colors for badges */
-.bg-fire { background-color: #EE8130 !important; }
+.bg-fire { background-color: #e51d1d !important; }
 .bg-water { background-color: #6390F0 !important; }
-.bg-grass { background-color: #7AC74C !important; }
+.bg-grass { background-color: #84c353c7 !important; }
+.bg-normal { background-color: #000000 !important; }
+.bg-bug { background-color: #289857a9 !important; }
+.bg-poison { background-color: #00ff40 !important; }
+.bg-flying { background-color: #aaaaaa78 !important; }
+.bg-ground { background-color: #ba3b117f !important; }
+.bg-fairy { background-color: #fb16e8e6 !important; }
+.bg-electric { background-color: #eeeb08c7 !important; }

@@ -29,7 +29,7 @@ function App() {
 
   const fetchPokemons = async () => {
     try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon`);
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=40`);
       const results = response.data.results;
       
       const pokemonData = await Promise.all(
@@ -86,10 +86,10 @@ function App() {
     {loading ? (
       <p className="text-center">Loading...</p>
     ) : (
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div className="row g-4 justify-content-center">
         {filteredPokemon().map((pokemon) => (
-          <div className="col" key={pokemon.id}>
-            <div className="card h-100 shadow-sm hover-card">
+          <div className="col-auto" key={pokemon.id}>
+            <div className="card h-100 shadow-sm hover-card" style={{ width: '250px' }}>
               <div className="card-body">
                 <h5 className="card-title text-center text-capitalize mb-2">
                   {pokemon.name}
